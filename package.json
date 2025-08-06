@@ -1,16 +1,40 @@
 {
-  "name": "youtobi",
+  "name": "Youtube2Bilibili",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc --watch"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "node src/main.mjs",
+    "lint": "eslint . --ext .js,.mjs",
+    "lint:fix": "eslint . --ext .js,.mjs --fix",
+    "format": "prettier --write \"**/*.{js,mjs,json,md}\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "axios": "^1.8.2",
+    "dot-env": "^0.0.1",
+    "dotenv": "^16.4.7",
+    "fast-xml-parser": "^5.0.8",
+    "undici": "^7.5.0"
+  },
   "devDependencies": {
-    "@types/node": "^22.14.0",
+    "@babel/core": "^7.26.10",
+    "@babel/eslint-parser": "^7.26.10",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.5.3",
+    "rollup": "^4.36.0",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^5.8.2"
   }
 }
